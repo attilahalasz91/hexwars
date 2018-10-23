@@ -1,20 +1,15 @@
 package hu.halasz.bmpmap;
 
-import net.sf.image4j.codec.bmp.BMPDecoder;
-
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -23,8 +18,8 @@ public class Main {
     public static void main(String[] args) throws IOException {
         System.out.println("read bmp start: " + LocalDateTime.now());
 
-        BufferedImage image = BMPDecoder.read(new File("C:\\Users\\Attila\\Desktop\\prog\\hexwars\\bmpmap\\hun.bmp"));
-        BufferedImage image2 = BMPDecoder.read(new File("C:\\Users\\Attila\\Desktop\\prog\\hexwars\\bmpmap\\hunoriginal.bmp"));
+        BufferedImage image = ImageIO.read(new File("C:\\Users\\Attila\\Desktop\\prog\\hexwars\\bmpmap\\hun.bmp"));
+        BufferedImage image2 = ImageIO.read(new File("C:\\Users\\Attila\\Desktop\\prog\\hexwars\\bmpmap\\hunoriginal.bmp"));
 
         int width = image.getWidth();
         int height = image.getHeight();

@@ -16,6 +16,8 @@
         <module>holding</module>
         <module>main</module>
         <module>bmpmap</module>
+        <module>revolution</module>
+        <module>revolution</module>
     </modules>
 
     <dependencies>
